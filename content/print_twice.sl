@@ -12,8 +12,16 @@ flow:
         do:
           op.print:
             - text
+        navigate:
+          SUCCESS: print_twice
+          FAILURE: print_third
     
     - print_twice:
+        do:
+          op.print:
+            -  text
+
+    - print_third:
         do:
           op.print:
             -  text
